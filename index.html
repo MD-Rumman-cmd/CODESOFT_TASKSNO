@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CreativeWeb | Build Your Future</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <nav class="navbar">
+      <a href="#home" class="logo">Creative<span>Web.</span></a>
+
+      <button class="menu-toggle" id="menuToggle"
+        aria-label="Toggle navigation" aria-expanded="false">
+        ☰
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="tagline">WELCOME TO CREATIVEWEB</p>
+        <h1>Build Your Digital Future With Us</h1>
+        <p class="hero-text">
+          Turn your creative ideas into beautiful websites.
+          Start your digital journey today!
+        </p>
+        <a href="#features" class="btn">Explore More</a>
+      </div>
+
+      <div class="hero-image">
+        <img
+          src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=900"
+          alt="Laptop showing a web development workspace">
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features section" id="features">
+      <div class="section-heading">
+        <p class="tagline">WHAT WE OFFER</p>
+        <h2>Our Features</h2>
+        <p>Everything you need to start your digital journey.</p>
+      </div>
+
+      <div class="feature-container">
+        <article class="feature-card">
+          <div class="feature-icon">🎨</div>
+          <h3>Creative Design</h3>
+          <p>Beautiful and modern designs that make your website stand out.</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3>Fast Performance</h3>
+          <p>Optimized layouts for a smooth and fast browsing experience.</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon">📱</div>
+          <h3>Responsive Layout</h3>
+          <p>Websites that look great on mobile, tablet, and desktop.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about section" id="about">
+      <div>
+        <p class="tagline">ABOUT US</p>
+        <h2>We Make Ideas Come Alive</h2>
+        <p>
+          CreativeWeb is a platform dedicated to creating attractive,
+          user-friendly and responsive digital experiences.
+          We believe every great idea deserves a beautiful website.
+        </p>
+        <a href="#contact" class="btn">Contact Us</a>
+      </div>
+
+      <img
+        src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=900"
+        alt="Team collaborating on a project">
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact section" id="contact">
+      <div class="section-heading">
+        <p class="tagline">GET IN TOUCH</p>
+        <h2>Contact Us</h2>
+        <p>Have a question? Send us a message.</p>
+      </div>
+
+      <form id="contactForm">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+
+        <label for="email">Your Email</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+
+        <label for="message">Your Message</label>
+        <textarea id="message" rows="5"
+          placeholder="Write your message..." required></textarea>
+
+        <button type="submit" class="btn">Send Message</button>
+        <p id="formStatus" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <h3>CreativeWeb.</h3>
+    <p>Creating beautiful digital experiences.</p>
+    <p>© 2026 CreativeWeb. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>

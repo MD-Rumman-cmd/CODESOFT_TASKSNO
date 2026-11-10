@@ -1,325 +1,112 @@
 
-/* Basic Reset */
+/* Reset */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+/* Page Background */
 body {
-  font-family: Arial, sans-serif;
-  color: #172b4d;
-  background: #ffffff;
-  line-height: 1.6;
-}
-
-a {
-  text-decoration: none;
-}
-
-/* Navigation Bar */
-header {
-  background: #172b4d;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-.navbar {
-  max-width: 1200px;
-  margin: auto;
-  padding: 18px 5%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {
-  color: white;
-  font-size: 25px;
-  font-weight: bold;
-}
-
-.logo span {
-  color: #38bdf8;
-}
-
-.nav-links {
-  display: flex;
-  list-style: none;
-  gap: 30px;
-}
-
-.nav-links a {
-  color: white;
-  transition: 0.3s;
-}
-
-.nav-links a:hover {
-  color: #38bdf8;
-}
-
-.menu-toggle {
-  display: none;
-  background: none;
-  color: white;
-  border: none;
-  font-size: 27px;
-  cursor: pointer;
-}
-
-/* Hero Section */
-.hero {
-  min-height: 580px;
-  padding: 70px 8%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 45px;
-  background: #f1f5f9;
-}
-
-.hero-content {
-  flex: 1;
-}
-
-.tagline {
-  color: #0284c7;
-  font-size: 13px;
-  font-weight: bold;
-  letter-spacing: 2px;
-  margin-bottom: 15px;
-}
-
-.hero h1 {
-  font-size: clamp(35px, 5vw, 58px);
-  line-height: 1.15;
-  margin-bottom: 20px;
-}
-
-.hero-text {
-  color: #64748b;
-  margin-bottom: 30px;
-  max-width: 500px;
-}
-
-.btn {
-  display: inline-block;
-  background: #0284c7;
-  color: white;
-  border: none;
-  padding: 13px 27px;
-  border-radius: 7px;
-  font-size: 15px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  background: #0369a1;
-  transform: translateY(-3px);
-}
-
-.hero-image {
-  flex: 1;
-}
-
-.hero-image img {
-  width: 100%;
-  max-height: 390px;
-  object-fit: cover;
-  border-radius: 15px;
-}
-
-/* Common Section */
-.section {
-  padding: 85px 8%;
-}
-
-.section-heading {
-  text-align: center;
-  margin-bottom: 45px;
-}
-
-.section-heading h2,
-.about h2 {
-  font-size: 36px;
-  margin-bottom: 12px;
-}
-
-.section-heading > p:last-child {
-  color: #64748b;
-}
-
-/* Features */
-.features {
-  background: white;
-}
-
-.feature-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
-}
-
-.feature-card {
-  padding: 35px 25px;
-  text-align: center;
-  border: 1px solid #e2e8f0;
-  border-radius: 12px;
-  transition: 0.3s;
-}
-
-.feature-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-}
-
-.feature-icon {
-  font-size: 40px;
-  margin-bottom: 15px;
-}
-
-.feature-card h3 {
-  margin-bottom: 12px;
-}
-
-.feature-card p {
-  color: #64748b;
-}
-
-/* About Section */
-.about {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 50px;
-  background: #f1f5f9;
-}
-
-.about p:not(.tagline) {
-  color: #64748b;
-  margin-bottom: 25px;
-}
-
-.about img {
-  width: 100%;
-  border-radius: 15px;
-}
-
-/* Contact Section */
-.contact form {
-  max-width: 600px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.contact label {
-  font-weight: bold;
-}
-
-.contact input,
-.contact textarea {
-  width: 100%;
-  padding: 14px;
-  border: 1px solid #cbd5e1;
-  border-radius: 7px;
-  font-family: inherit;
-  font-size: 15px;
-}
-
-.contact input:focus,
-.contact textarea:focus {
-  outline: 2px solid #38bdf8;
-  border-color: #0284c7;
-}
-
-.contact textarea {
-  resize: vertical;
-}
-
-.contact form .btn {
-  align-self: flex-start;
-}
-
-#formStatus {
-  color: #047857;
-  font-weight: bold;
-}
-
-/* Footer */
-footer {
-  background: #172b4d;
-  color: white;
-  text-align: center;
-  padding: 35px 15px;
-}
-
-footer h3 {
-  color: #38bdf8;
-  margin-bottom: 10px;
-}
-
-footer p {
-  font-size: 14px;
-  margin: 5px 0;
-  color: #cbd5e1;
-}
-
-/* Mobile Responsive Design */
-@media (max-width: 768px) {
-  .navbar {
-    flex-wrap: wrap;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  .nav-links {
-    display: none;
-    width: 100%;
-    flex-direction: column;
-    gap: 15px;
-    padding-top: 20px;
-  }
-
-  .nav-links.active {
+    min-height: 100vh;
     display: flex;
-  }
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    font-family: Arial, sans-serif;
+}
 
-  .hero {
-    flex-direction: column;
+/* Calculator Box */
+.calculator {
+    width: 340px;
+    background: #1e293b;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+}
+
+h2 {
     text-align: center;
-    padding: 55px 6%;
-  }
+    color: white;
+    margin-bottom: 20px;
+}
 
-  .hero-image {
+/* Display Screen */
+#display {
     width: 100%;
-  }
+    height: 75px;
+    margin-bottom: 20px;
+    padding: 15px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background: #0f172a;
+    color: white;
+    font-size: 28px;
+    text-align: right;
+}
 
-  .feature-container {
-    grid-template-columns: 1fr;
-  }
+/* Button Grid */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
 
-  .about {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
+/* All Buttons */
+button {
+    height: 58px;
+    border: none;
+    border-radius: 10px;
+    background: #334155;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
 
-  .about img {
-    order: -1;
-  }
+/* Hover Effect */
+button:hover {
+    background: #475569;
+    transform: scale(1.04);
+}
 
-  .section {
-    padding: 60px 6%;
-  }
+/* Operator Buttons */
+.operator {
+    background: #0284c7;
+}
 
-  .section-heading h2,
-  .about h2 {
-    font-size: 29px;
-  }
+.operator:hover {
+    background: #0369a1;
+}
+
+/* Equal Button */
+.equal {
+    background: #16a34a;
+}
+
+.equal:hover {
+    background: #15803d;
+}
+
+/* Active Button */
+button:active {
+    transform: scale(0.95);
+}
+
+/* Small Screens */
+@media (max-width: 380px) {
+    .calculator {
+        width: 92%;
+        padding: 18px;
+    }
+
+    .buttons {
+        gap: 8px;
+    }
+
+    button {
+        height: 52px;
+    }
 }
